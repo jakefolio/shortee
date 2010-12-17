@@ -1,0 +1,30 @@
+[Wed Dec 15 15:31:48 2010] [error] [client 127.0.0.1] File does not exist: /Users/jsmith/Sites/urlshort.local/favicon.ico, referer: http://urlshort.local/
+[Wed Dec 15 16:05:26 2010] [error] [client 127.0.0.1] File does not exist: /Users/jsmith/Sites/urlshort.local/favicon.ico
+[Wed Dec 15 16:33:44 2010] [error] (61)Connection refused: proxy: HTTP: attempt to connect to 127.0.0.1:3000 (urlshort.local) failed
+[Wed Dec 15 16:33:44 2010] [error] ap_proxy_connect_backend disabling worker for (urlshort.local)
+[Wed Dec 15 16:33:44 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:33:47 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:33:47 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:33:49 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:33:49 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:33:53 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:33:53 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:15 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:15 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:16 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:16 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:17 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:17 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:25 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 16:34:25 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Wed Dec 15 17:39:35 2010] [error] (61)Connection refused: proxy: HTTP: attempt to connect to 127.0.0.1:3000 (urlshort.local) failed
+[Wed Dec 15 17:39:35 2010] [error] ap_proxy_connect_backend disabling worker for (urlshort.local)
+[Wed Dec 15 17:39:36 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Thu Dec 16 11:08:38 2010] [error] (61)Connection refused: proxy: HTTP: attempt to connect to 127.0.0.1:3000 (urlshort.local) failed
+[Thu Dec 16 11:08:38 2010] [error] ap_proxy_connect_backend disabling worker for (urlshort.local)
+[Thu Dec 16 11:09:33 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Thu Dec 16 11:09:33 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Thu Dec 16 11:09:35 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Thu Dec 16 11:09:35 2010] [error] proxy: HTTP: disabled connection for (urlshort.local)
+[Thu Dec 16 11:09:41 2010] [error] (61)Connection refused: proxy: HTTP: attempt to connect to 127.0.0.1:3000 (urlshort.local) failed
+[Thu Dec 16 11:09:41 2010] [error] ap_proxy_connect_backend disabling worker for (urlshort.local)
