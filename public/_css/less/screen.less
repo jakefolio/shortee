@@ -1,0 +1,48 @@
+@import 'functions';
+@import 'reset';
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	.gradient(rgba(94, 174, 246, 1),  rgba(240, 248, 254, 1));
+	font: 12px/1.3 'Lucida Grande', cambria, arial;
+}
+h1 {
+	color: #FFF;
+	font: 120px/1.4 'Yanone Kaffeesatz', 'Lucida Grande', cambria, arial;
+	text-align: center;
+	text-shadow: 3px 2px 2px #244874;
+}
+.shorten {
+	border: 1px #FFF solid;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 6px 12px;
+	.borderRounded(5px);
+	.gradient(#fcd794, #e6a020);
+	.rounded(5px);
+	.shadow(0px, 2px, 5px, #333);
+}
+.url {
+	border: 1px #666 solid;
+	color: #666;
+	font-size: 24px;
+	margin-right: 10px;
+	padding: 3px 5px;
+	width: 420px;
+}
+.url:focus {
+	border: 1px #999	 solid;
+}
+.wrap {
+	background: rgba(255, 255, 255, 0.4);
+	padding: 25px;
+	.rounded(10px);
+}
+.container {
+	margin: 0 auto;
+	width: 600px;
+}

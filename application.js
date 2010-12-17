@@ -15,6 +15,10 @@ var sys = require('sys'),
 	  }
 	  db.end();
 	}
+	
+	var meta = {
+		title: 'sh.ort.ee'
+	}
 
 // Configure App
 
@@ -26,7 +30,7 @@ app.configure(function(){
     app.use(express.cookieDecoder());
     app.use(express.session());
     app.use(express.methodOverride());
-    app.use(express.compiler({ src: __dirname + '/public', enable: ['less'] }));
+    app.use(express.staticProvider(__dirname + '/public'));
     app.use(app.router);
 });
 
@@ -41,7 +45,8 @@ app.get('/', function(req, res) {
 	res.render('index.html',
 	{
 		locals: {
-			title: 'Shortee URL Shortner'
+			title: 'Shortee URL Shortner',
+			meta: meta
 		}
 	});
 });
@@ -61,7 +66,8 @@ app.get('/:url', function(req, res){
       } else {
         res.render('notfound.html',{
 					locals: {
-						title: 'URL Not Found'
+						title: 'URL Not Found',
+						meta: meta
 					}
 				});
       }
@@ -90,7 +96,8 @@ app.post('/save', function(req, res) {
 		{
 			locals: {
 				long_url: long_url,
-				href: href
+				href: href,
+				meta: meta
 			}
 		});
   });

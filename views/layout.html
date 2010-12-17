@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>Shorty</title>
+		<head>
+			<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+			<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+			<title><%= meta.title %></title>
+			<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css'>
+			<link rel="stylesheet" href="/_css/screen.css" type="text/css" charset="utf-8">
+			<!--[if lt IE 9]>
+				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+		</head>
 	</head>
 	<body>
-		<%- body %>
+		<div class="container">
+			<h1>sh.ort.ee</h1>
+			<div class="wrap">
+				<%- body %>
+			</div>
+		</div>
 	</body>
 </html>
