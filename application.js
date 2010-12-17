@@ -55,25 +55,28 @@ app.get('/:url', function(req, res){
     db.connect();
 
     var rows = [];
-    var result = db.query("SELECT original FROM urls WHERE short = '"+req.params.url+"'", selectCallback);
+    var result = db.query("SELECT id,original FROM urls WHERE short = '"+req.params.url+"'", selectCallback);
     result.addListener('row', function(r) {
       rows.push(r);
     });
 
     result.addListener('end', function() {
       if (rows.length) {
+        db.connect();
+        Shortee.db = db;
+        Shortee.insertStat({'id': rows[0].id, 'user_agent' : req.headers['user-agent']});
         res.redirect(rows[0].original);
       } else {
         res.render('notfound.html',{
-					locals: {
-						title: 'URL Not Found',
+          locals: {
+            title: 'URL Not Found',
 						meta: meta
-					}
-				});
+          }
+        });
       }
     });
 
-    //console.log(req.headers.host);
+    //console.log(req.headers);
 });
 
 app.post('/save', function(req, res) {
@@ -84,7 +87,8 @@ app.post('/save', function(req, res) {
   }
 
   db.connect();
-	Shortee.db = db;
+  Shortee.db = db;
+
   var result = db.query("SELECT MAX(id) as max FROM urls", selectCallback);
   result.addListener('row', function(r) {
     var max = r.max,
@@ -92,14 +96,14 @@ app.post('/save', function(req, res) {
         href = "http://"+ req.headers.host + "/" + short_url;
 
     Shortee.insertURL(long_url, short_url);
-		res.render('save.html',
-		{
-			locals: {
-				long_url: long_url,
-				href: href,
+    res.render('save.html',
+    {
+      locals: {
+        long_url: long_url,
+        href: href,
 				meta: meta
-			}
-		});
+      }
+    });
   });
 });
 
